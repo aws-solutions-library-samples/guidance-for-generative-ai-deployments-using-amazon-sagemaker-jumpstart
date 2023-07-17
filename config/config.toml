@@ -1,0 +1,53 @@
+[CONFIG]
+# jumpstart_model_environment
+# JSON object containing the environment variables for the jumpstart model
+# environment as key-value pairs. You may need to adjust these depending on
+# the model chosen.
+# A good starting point to learn more about this is this blog post
+# https://aws.amazon.com/blogs/machine-learning/generate-images-from-text-with-the-stable-diffusion-model-on-amazon-sagemaker-jumpstart/
+# and the therein referenced Jupyter NOtebook
+# https://github.com/aws/amazon-sagemaker-examples/blob/main/introduction_to_amazon_algorithms/jumpstart_text_to_image/Amazon_JumpStart_Text_To_Image.ipynb
+jumpstart_model_environment = { "MMS_MAX_RESPONSE_SIZE" = "20000000", "SAGEMAKER_PROGRAM" = "inference.py", "SAGEMAKER_SUBMIT_DIRECTORY" = "/opt/ml/model/code" }
+
+# jumpstart_model_id
+# The list of pre-trained models can be found here:
+# https://sagemaker.readthedocs.io/en/stable/doc_utils/pretrainedmodels.html
+jumpstart_model_id = "model-txt2img-stabilityai-stable-diffusion-v2-1-base"
+
+# jumpstart_model_version
+# Version of the model to use. "*" for newest one.
+jumpstart_model_version = "*"
+
+# instance_type
+# The instance type to be used for the asynchronous SageMaker endpoint
+instance_type = "ml.g4dn.xlarge"
+
+# endpoint_cooldown_minutes
+# Grace period after scaling activity.
+endpoint_cooldown_minutes = 15
+
+# max_capacity
+# Maximum number of instances the asynchronous SageMaker endpoint will scale
+# up to
+max_capacity = 1
+
+# region
+# The AWS region to deploy this solution into.
+region = "eu-central-1"
+
+# repository_name
+# The name of the CodeCommit repository to be created.
+repository_name = "StableDiffusionService"
+
+# repository_branch
+# The branch name of the the CodeCommit repository changes to will trigger the
+# CodePipeline pipeline for redeployment
+repository_branch = "main"
+
+# powertools_service_name
+# The service name for the lambda powertools. More information here:
+powertools_service_name = "SDService"
+
+# powertools_metrics_namespace
+# The metrics namespace for the lambda powertools. More information here:
+powertools_metrics_namespace = "textToImage/SDService"

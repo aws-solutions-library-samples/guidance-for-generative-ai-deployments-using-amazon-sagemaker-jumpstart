@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "save-message"
+version = "1.0.0"
+description = ""
+authors = [
+    "Constantin Gonzalez <glez@amazon.com>",
+    "Robert Hanuschke <robhan@amazon.com>",
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.26.162"
+aws-lambda-powertools = "^2.18.0"
+
+
+[tool.poetry.group.dev.dependencies]
+boto3-stubs = { extras = ["s3"], version = "^1.26.162" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

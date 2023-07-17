@@ -1,0 +1,8 @@
+{
+    "prompt": "astronaut on a horse",
+    "width": 400,
+    "height": 400,
+    "num_images_per_prompt": 2,
+    "num_inference_steps": 50,
+    "guidance_scale": 7.5
+}
