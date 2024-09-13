@@ -1,5 +1,7 @@
 # Guidance for Generative AI Deployments using Amazon SageMaker JumpStart
 
+**Important**: This Guidance requires the use of AWS CodeCommit, which is no longer available to new customers. Existing customers of AWS CodeCommit can continue using and deploying this Guidance as normal.
+
 ## Purpose
 
 This repository provides a pattern for simple generative AI deployments on AWS. It aims at keeping deployment easy, the architecture understandable and the used resources as low-maintenance and cost-effective as possible.
